@@ -42,7 +42,7 @@ FINAL
 				</tr>
 
 				<tr>
-					<td class="sub">Mathematics 1</td>
+					<td class="sub">Mathematics</td>
 					<td class="sub">3 (Theory)</td>
 					<td class="">
 						<select name="" id="s1">
@@ -74,7 +74,7 @@ FINAL
 				</tr>
 
 				<tr>
-					<td class="sub">Statics</td>
+					<td class="sub">Statistics</td>
 					<td class="sub">3 (Theory)</td>
 					<td class="">
 						<select name="" id="s3">
@@ -121,6 +121,24 @@ FINAL
 					</td>
 				</tr>
 				<tr>
+
+				<tr>
+					<td class="sub">Chemistry</td>
+					<td class="sub">3 (Theory)</td>
+					<td class="">
+						<select name="" id="s6">
+							<option value="O">O</option>
+							<option value="A+">A+</option>
+							<option value="A">A</option>
+							<option value="B+">B+</option>
+							<option value="B">B</option>
+							<option value="C">C</option>
+							<option value="P">P</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+				
 					<td class="final"><button onclick="reset()" class="but" id="but"> Reset</button></td>
 					<td class="final">
 						<button onclick="calc()" class="but" id="but">Calculate</button>
@@ -194,14 +212,15 @@ FINAL
 			if (grd == "C") t += 5 * 3;
 			if (grd == "P") t += 4 * 3;
 
-			// //ICAD lab
-			// var grd = document.getElementById("s6").value;
-			// if (grd == "A+") t += 10 * 3;
-			// if (grd == "A") t += 9 * 3;
-			// if (grd == "B+") t += 8 * 3;
-			// if (grd == "B") t += 7 * 3;
-			// if (grd == "C+") t += 6 * 3;
-			// if (grd == "C") t += 5 * 3;
+			//chem
+			 var grd = document.getElementById("s6").value;
+			if (grd == "O") t += 10 * 3;
+			if (grd == "A+") t += 9 * 3;
+			if (grd == "A") t += 8 * 3;
+			if (grd == "B+") t += 7 * 3;
+			if (grd == "B") t += 6 * 3;
+			if (grd == "C") t += 5 * 3;
+			if (grd == "P") t += 4 * 3;
 
 			//pom
 			/*var grd = document.getElementById("s7").value;
@@ -212,7 +231,7 @@ FINAL
 			if (grd == "C+") t += 6 * 2;
 			if (grd == "C") t += 5 * 2;*/
 
-			document.getElementById("a2").innerHTML = "SPI: " + (t / 15).toFixed(3);
+			document.getElementById("a2").innerHTML = "SPI: " + (t / 18).toFixed(3);
 		}
 	</script>
 </html>
